@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Garden Tips - My Garden Hub</title>
+  <link rel="stylesheet" type="text/css" href="gardentips.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+  <header>
+
+
+    <nav>
+      <div class="logo">
+        <h1 style="font-size: 20px;"> Tips and Tricks for the Gardeners</h1>
+      </div>
+      <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="gardentour.html">GardenTour </a>
+        <a href="gallary.html">Gallery</a>
+        <a href="gardentips.html">gardentips</a>
+        <a href="about.html">About Us</a>
+        <a href="forum.html">Feedback</a>
+
+      </div>
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search...">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+    <main>
+      <h2>Whether you're a seasoned gardener or just getting started, these tips and tricks will help you create a
+        beautiful and thriving garden.</h2>
+
+      <div id="tips">
+        <div v-for="tip in tips" :key="tip.id">
+          <h2>Cactus</h2>
+          <ul>
+            <li><strong>Watering:</strong> Cactus requires watering sparingly. During the growing season, water the cactus when the soil is completely dry. In the winter, water only when the soil is completely dry and the cactus begins to shrivel.</li>
+            <li><strong>Light:</strong> Cactus requires full sun exposure for at least six hours a day. Keep it in a sunny spot indoors or outdoors.</li>
+            <li><strong>Soil:</strong> Cactus requires well-draining soil with a pH of 6.0 to 7.5. Use a soil mix with perlite, sand, and gravel to ensure proper drainage.</li>
+            <li><strong>Fertilizer:</strong> Fertilize the cactus once a month during the growing season using a balanced, low-nitrogen fertilizer.</li>
+          </ul>
+          <h2>Air Plants</h2>
+          <ul>
+            <li><strong>Watering:</strong> Air plants require watering once a week. Soak the plant in water for about an hour and then shake off any excess water.</li>
+            <li><strong>Light:</strong> Air plants require bright, indirect light. Place them near a window that receives bright light but avoid direct sunlight.</li>
+            <li><strong>Soil:</strong> Air plants do not require soil to grow. They absorb nutrients and moisture through their leaves.</li>
+            <li><strong>Fertilizer:</strong> Fertilize the air plants once a month using a balanced, water-soluble fertilizer.</li>
+          </ul>
+          <h2>Bonsai</h2>
+          <ul>
+            <li><strong>Watering:</strong> Bonsai requires frequent watering. Water the plant when the soil begins to feel slightly dry. Avoid overwatering as it can lead to root rot.</li>
+            <li><strong>Light:</strong> Bonsai requires bright, indirect light. Place it near a window that receives bright light but avoid direct sunlight.</li>
+            <li><strong>Soil:</strong> Bonsai requires well-draining soil. Use a soil mix with perlite, sand, and organic matter to ensure proper drainage.</li>
+            <li><strong>Fertilizer:</strong> Fertilize the bonsai every two weeks during the growing season using a balanced, slow-release fertilizer.</li>
+          </ul>
+        </div>
+
+      </div>
+  </header>
+
+  </main>
+  <div class="icon-bar">
+    <a href="https://www.facebook.com/profile.php?id=100090182764907&mibextid=ZbWKwL" target="_blank"
+      class="facebook"><i class="fa fa-facebook" style="color: rgb(78, 131, 230);"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter " style="color: rgb(111, 132, 240);"></i></a>
+    <a href="#" class="Youtube"><i class="fa fa-youtube" style="color: rgba(245, 12, 12, 0.604);"></i></a>
+  </div>
+</body>
+
+</html>

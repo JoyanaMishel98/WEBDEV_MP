@@ -1,0 +1,150 @@
+
+body {
+  font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/neww.jpg);
+    backdrop-filter: blur(4px);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+header {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+nav {
+  width: 100%;
+  height: 15vh;
+  background:linear-gradient(rgba(22, 107, 25, 0.999), rgb(244, 241, 241));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+nav .logo {
+  width: 20%;
+  text-align: center;
+
+}
+
+nav .menu {
+  width: 50%;
+  display: flexbox;
+  justify-content: space-around;
+}
+
+nav .menu a {
+  width: 25%;
+  text-decoration: none;
+  color: white;
+  margin: 20px 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+ 
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+h2 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f191e7;
+  text-shadow: #060606;
+  
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #a588ee;
+  font-weight: bold;
+ text-transform: uppercase;
+ font-family:cursive;
+ text-shadow: #fbfbfb;
+}
+
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: #fbfbfb;
+  margin-bottom: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: #fbfbfb;
+}
+
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+
+.diy-section {
+  background-color: #de2d2d;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.diy-section h2 {
+  color: #5d5d5d;
+}
+
+.diy-section p {
+  color: #5d5d5d;
+}
+
+
+
+  .icon-bar {
+    position: fixed;
+    z-index: 10;
+    top: 97%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.616);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.icon-bar a {
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: rgb(125, 122, 122);
+    font-size: 20px;
+}
+.icon-bar a:hover {
+    background-color: rgba(146, 142, 142, 0.603);
+    color: #7e7878;
+}
+  footer {
+    background-color: #d1d1d1;
+    color: #3c3c3c;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+  }
+  

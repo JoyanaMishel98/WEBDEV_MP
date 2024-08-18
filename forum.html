@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment Forum</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="forum.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1 style="font-size: 20px;"> My Garden Junction</h1>
+      </div>
+      <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="gardentour.html">GardenTour </a>
+        <a href="gallary.html">Gallery</a>
+        <a href="gardentips.html">gardentips</a>
+        <a href="about.html">About Us</a>
+        <a href="forum.html">Feedback</a>
+
+      </div>
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search...">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+    <div id="app">
+      
+      <div class="row">
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" v-model="name">
+          </div>
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" id="comment" rows="3" v-model="comment"></textarea>
+          </div>
+          <button class="btn btn-primary" v-on:click="addComment()">Add Comment</button>
+        </div>
+      </div> 
+      <li v-for="comment in comments">
+        <strong>{{ comment.name }}</strong> - {{ comment.comment }}
+        <button class="btn btn-danger" @click="deleteComment(comment)">Delete</button>
+      </li>
+        
+      <div class="row">
+        <div class="col-md-8" v-for="(comment, index) in comments" :key="index">
+          <div class="card">
+            <div class="card-header">{{ comment.name }}</div>
+            <div class="card-body">
+              <p>{{ comment.comment }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="icon-bar">
+      <a href="https://www.facebook.com/profile.php?id=100090182764907&mibextid=ZbWKwL" target="_blank"
+        class="facebook"><i class="fa fa-facebook" style="color: rgb(78, 131, 230);"></i></a>
+      <a href="#" class="twitter"><i class="fa fa-twitter " style="color: rgb(111, 132, 240);"></i></a>
+      <a href="#" class="google"><i class="fa fa-google" style="color: rgba(78, 230, 119, 0.604);"></i></a>
+    </div>
+  </header>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        name: '',
+        comment: '',
+        comments: []
+      },
+      methods: {
+        addComment() {
+          if (this.name.trim() !== '' && this.comment.trim() !== '') {
+            this.comments.push({
+              name: this.name,
+              comment: this.comment
+            });
+            this.name = '';
+            this.comment = '';
+          }
+        }
+        ,
+        deleteComment: function (comment) {
+          var index = this.comments.indexOf(comment);
+          this.comments.splice(index, 1);
+        }
+      }
+    });
+  </script>
+  <div class="icon-bar">
+    <a href="https://www.facebook.com/profile.php?id=100070441441269&mibextid=ZbWKwL" target="_blank"
+      class="facebook"><i class="fa fa-facebook" style="color: rgb(78, 131, 230);"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter " style="color: rgb(111, 132, 240);"></i></a>
+    <a href="#" class="Youtube"><i class="fa fa-youtube" style="color: rgba(245, 12, 12, 0.604);"></i></a>
+  </div>
+</body>
+
+</html>

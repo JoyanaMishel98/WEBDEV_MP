@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
+    url("img/cacti.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+nav {
+  width: 100%;
+  height: 15vh;
+  background:linear-gradient(rgba(22, 107, 25, 0.999), rgb(244, 241, 241));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+nav .logo {
+  width: 20%;
+  text-align: center;
+
+}
+
+nav .menu {
+  width: 50%;
+  display: flexbox;
+  justify-content: space-around;
+}
+
+nav .menu a {
+  width: 25%;
+  text-decoration: none;
+  color: white;
+  margin: 20px 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255) ;
+}
+
+section h3 {
+  font-size: 35px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px black;
+}
+
+section h1 {
+  margin: 30px 0 20px 0;
+  font-size: 55px;
+  font-weight: 700;
+  text-shadow: 2px 1px 5px black;
+  text-transform: uppercase;
+}
+
+section p {
+  font-size: 25px;
+  word-spacing: 2px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 1px black;
+}
+
+
+
+.change_content:after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: #e9e914;
+}
+
+@keyframes changetext {
+  0% {
+    content: "Cactus";
+  }
+  20% {
+    content: "Bonsai";
+  }
+  35% {
+    content: "Indoor Plant";
+  }
+  60% {
+    content: "Outdoor Plants";
+  }
+  80% {
+    content: "Air Plants";
+  }
+  100% {
+    content: "DIY Painted Pots";
+  }
+}
+.icon-bar {
+  position: fixed;
+  z-index: 10;
+  top: 97%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.616);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.icon-bar a {
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.icon-bar a:hover {
+  background-color: rgb(255, 255, 255);
+  color: #ccc;
+}
